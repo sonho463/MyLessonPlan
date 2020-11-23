@@ -16,16 +16,18 @@
 
 .article {
 	display: flex;
+	align-items: flex-start;
 }
 
 img {
 	width: 50%;
-
-}
+	object-fit: scale-down;
+	}
 
 .desc {
 	width: 50%;
-	margin-left: 20px;
+	margin: 0 0 0 20px;
+
 	/* background-color: pink; */
 }
 
