@@ -2,17 +2,30 @@ import React from "react";
 
 import './LessonPlan.css';
 
-const LessonPlan = () => {
+const LessonPlan = ({title, img, desc}) => {
+	const clickHandler = () => {
+		alert('Viva, Over40WebClub!');
+	};
+
+	const complexClickHandler = title => {
+		alert(title);
+	};
+
 	return (
 		<div>
-			<section class="plan">
-				<h2 class="title">techmeets模写</h2>
-				<img src="https://cdn.pixabay.com/photo/2020/11/02/13/25/north-sea-oats-5706656_1280.jpg" alt="" />
-				<p className="desc">
-					テックミーツというスクールが提供してくれた実際の案件に近いもの。
-					５００００円の案件だということで、現在まだ進行中のため、
-					Sonの時給はひどく低いものになっている。
+			<section className="plan">
+				<h2 className="title">{title}</h2>
+				<img src={img} alt="" />
+				<p className="desc">{desc}</p>
+				<p>
+				<button type="button" onClick={clickHandler}>
+					clickHandler
+				</button>
+				<button type="button" onClick={() => complexClickHandler(title)}>
+					complexClickHandler
+				</button>
 				</p>
+				<hr/>
 			</section>
 		</div>
 		// <div>
@@ -21,9 +34,10 @@ const LessonPlan = () => {
 		// 		<p><textarea name="log" id="log" cols="30" rows="10"></textarea></p>
 		// 	</form>
 		// </div>
-	);
-}
+		);
+	}
 
+	export default LessonPlan;
 
 
 // const SimpleDatePicker = () => {
@@ -40,5 +54,3 @@ const LessonPlan = () => {
 //     />
 //   )
 // }
-
-export default LessonPlan;
