@@ -14,13 +14,19 @@
 	text-align: center;
 }
 
+.article {
+	display: flex;
+}
+
 img {
-	width: 80%;
+	width: 50%;
 
 }
 
 .desc {
-	width: 80%;
+	width: 50%;
+	margin-left: 20px;
+	/* background-color: pink; */
 }
 
 button {

@@ -15,8 +15,11 @@ const LessonPlan = ({title, img, desc}) => {
 		<div>
 			<section className="plan">
 				<h2 className="title">{title}</h2>
-				<img src={img} alt="" />
-				<p className="desc">{desc}</p>
+					<div className="article">
+						<img src={img} alt="" />
+						<p className="desc">{desc}</p>
+					</div>
+
 				<p>
 				<button type="button" onClick={clickHandler}>
 					clickHandler
