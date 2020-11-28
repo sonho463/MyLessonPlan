@@ -31,29 +31,7 @@ const LessonPlan = ({title, img, desc}) => {
 				<hr/>
 			</section>
 		</div>
-		// <div>
-		// 	<form action="">
-		// 		<h2><input type="date"></input></h2>
-		// 		<p><textarea name="log" id="log" cols="30" rows="10"></textarea></p>
-		// 	</form>
-		// </div>
 		);
 	}
 
 	export default LessonPlan;
-
-
-// const SimpleDatePicker = () => {
-//   const initialDate = new Date()
-//   const [startDate, setStartDate] = useState(initialDate)
-//   const handleChange = (date) => {
-//     setStartDate(date)
-//   }
-
-//   return (
-//     <DatePicker
-//       selected={startDate}
-//       onChange={handleChange}
-//     />
-//   )
-// }

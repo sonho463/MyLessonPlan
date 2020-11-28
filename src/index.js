@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import Header from './Header'
-import { plans } from "./plans";
-import LessonPlan from './LessonPlan'
+import { lessons } from "./lessons";
+import LessonPlan from './LessonPlan';
 
 function MyLog() {
   return (
@@ -14,10 +14,11 @@ function MyLog() {
       {/* <h4><LessonPlan /></h4> */}
 
 			<section className="planList">
-				{plans.map(plan => (
-					<LessonPlan key={plan.id} {...plan} />
+				{lessons.map(lesson => (
+					<LessonPlan key={lesson.id} {...lesson} />
 				))}
 			</section>
+
     </>
   );
 }
