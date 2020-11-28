@@ -5,11 +5,11 @@ function Counter() {
   const [count, setCount] = useState(0);
   const reset = () => {
     setCount(0);
-  };
+	};
 
   const CountUp = () => {
     if(count<10){
-      setCount( count+1 );
+			setCount( count+1 );
     }else{
       alert('最高は１０です。');
     };
@@ -21,13 +21,30 @@ function Counter() {
     }else{
       alert('最低は０です。');
     };
-  }
+	}
+
+	const heart = (num) => {
+		let output = '';
+
+		for(let i = 0; i < num; i++){
+			output += '♥'
+		};
+
+		return (
+			<>
+				<p>{output}</p>
+			</>
+		)
+
+	}
 
 
   return (
     <>
       <section className="item">
-        <h2>理解度:{count}</h2>
+
+				<h2>理解度</h2>
+
         <button className="button" onClick={CountUp}>
           ＋
         </button>
@@ -38,6 +55,7 @@ function Counter() {
         <button className="button reset" onClick={reset}>
           リセット
         </button>
+				<p>{heart(count)}</p>
       </section>
     </>
   );
