@@ -1,33 +1,21 @@
 import React from "react";
 
 import './LessonPlan.css';
+import UnderStand from './UnderStand'
 
 const LessonPlan = ({title, img, desc}) => {
-	const clickHandler = () => {
-		alert('Viva, Over40WebClub!');
-	};
-
-	const complexClickHandler = title => {
-		alert(title);
-	};
 
 	return (
 		<div>
 			<section className="plan">
-				<h2 className="title">{title}</h2>
-					<div className="article">
-						<img src={img} alt="" />
-						<p className="desc">{desc}</p>
-					</div>
-
-				<p>
-				<button type="button" onClick={clickHandler}>
-					clickHandler
-				</button>
-				<button type="button" onClick={() => complexClickHandler(title)}>
-					complexClickHandler
-				</button>
-				</p>
+				<div className="title_area">
+					<h2 className="title">{title}</h2>
+					<UnderStand />
+				</div>
+				<div className="article">
+					<img src={img} alt="" />
+					<p className="desc">{desc}</p>
+				</div>
 				<hr/>
 			</section>
 		</div>

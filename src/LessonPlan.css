@@ -8,6 +8,15 @@
 	border-bottom: 1px solid gray;
 }
 
+.title_area {
+	display: flex;
+	justify-content: center;
+}
+
+h2 {
+	margin-right: 30px;
+}
+
 .title {
 	font-size: 24px;
 	width: 100%;
@@ -29,8 +38,4 @@ img {
 	margin: 0 0 0 20px;
 
 	/* background-color: pink; */
-}
-
-button {
-	margin-right: 5px;
 }

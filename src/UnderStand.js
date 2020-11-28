@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './UnderStand.css';
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -26,8 +27,7 @@ function Counter() {
   return (
     <>
       <section className="item">
-        <h1>理解度</h1>
-        <h2>{count}</h2>
+        <h2>理解度:{count}</h2>
         <button className="button" onClick={CountUp}>
           ＋
         </button>
@@ -35,7 +35,7 @@ function Counter() {
           ー
         </button>
 
-        <button className="button" onClick={reset}>
+        <button className="button reset" onClick={reset}>
           リセット
         </button>
       </section>
