@@ -16,15 +16,20 @@ function MyLog() {
 			</div>
       {/* <h4><LessonPlan /></h4> */}
 
+			{/* <section className="planList">
+				{lessons.map(lesson => <LessonPlan key={lesson.toString()} {...lesson} />)}
+			</section> */}
 			<section className="planList">
-				{lessons.map(lesson => (
-					<LessonPlan key={lesson.id} {...lesson} />
-				))}
+				{React.Children.toArray(
+					lessons.map(lesson => <LessonPlan {...lesson} />)
+				)}
 			</section>
 
     </>
   );
 }
+
+
 
 
 

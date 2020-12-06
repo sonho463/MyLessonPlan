@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './UnderStand.css';
+
+
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -10,18 +12,20 @@ function Counter() {
   const CountUp = () => {
     if(count<10){
 			setCount( count+1 );
-    }else{
-      alert('最高は１０です。');
     };
-  }
+	}
 
   const CountDown = () => {
     if(count > 0){
       setCount(count-1);
-    }else{
-      alert('最低は０です。');
     };
 	}
+
+	useEffect(()=>{
+		if(count === 10){
+			alert('満点です！');
+		}
+	},[count])
 
 	const heart = (num) => {
 		let output = '';
@@ -36,7 +40,11 @@ function Counter() {
 			</>
 		)
 
+
+
 	}
+
+
 
 
   return (
@@ -45,17 +53,17 @@ function Counter() {
 
 				<h2>理解度</h2>
 
-        <button className="button" onClick={CountUp}>
+        <button className="button up" onClick={CountUp}>
           ＋
         </button>
-        <button className="button" onClick={CountDown}>
+        <button className="button down" onClick={CountDown}>
           ー
         </button>
 
         <button className="button reset" onClick={reset}>
           リセット
         </button>
-				<h4>{heart(count)}</h4>
+				<h4 className="point">{heart(count)}</h4>
       </section>
     </>
   );
