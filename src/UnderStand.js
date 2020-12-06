@@ -55,7 +55,7 @@ function Counter() {
         <button className="button reset" onClick={reset}>
           リセット
         </button>
-				<p>{heart(count)}</p>
+				<h4>{heart(count)}</h4>
       </section>
     </>
   );

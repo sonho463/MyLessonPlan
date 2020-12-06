@@ -6,6 +6,9 @@ import { lessons } from "./lessons";
 import LessonPlan from './LessonPlan';
 
 function MyLog() {
+
+	console.log({...lessons});
+
   return (
     <>
 			<div>
